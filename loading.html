@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Loading...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/loading.css">
+</head>
+
+<body>
+    <div class="loading-container">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">
+            <h2>Welcome to Spotify By RC</h2>
+            <p>Checking your authentication...</p>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Just go to login.html after delay
+        setTimeout(() => {
+            window.location.href = './login.html';
+        }, 2500);
+    </script>
+</body>
+
+</html>

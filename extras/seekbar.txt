@@ -1,0 +1,34 @@
+JS:
+// Add an event listener to seekbar
+    document.querySelector(".seekbar").addEventListener("click", (e) => {
+
+        // let percent = (e.offsetX / e.target.getBoundingClientRect().width) * 100;
+        // document.querySelector(".circle").style.left = `${percent}%`;
+        // currentSong.currentTime = (percent / 100) * currentSong.duration;
+        // const seekbar = e.currentTarget;
+        // const clickPosition = e.clientX - seekbar.getBoundingClientRect().left;
+        // const percentage = clickPosition / seekbar.offsetWidth;
+        // currentSong.currentTime = percentage * currentSong.duration;
+    });
+
+CSS:
+.seekbar {
+    left: 0;
+    height: 6px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    bottom: 7px;
+    left: 0;
+    transition: left 0.5s;
+}

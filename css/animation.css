@@ -1,0 +1,66 @@
+/* Container for animation - Positioned above landing page */
+.image-rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+/* Common style for rain images */
+.image-drop {
+    position: absolute;
+    top: -50px;
+    /* ensures it starts visually outside */
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    animation: dropAndFade 3s ease-out forwards;
+}
+
+/* Keyframes for falling and fading */
+@keyframes dropAndFade {
+    0% {
+        transform: translateY(-150px);
+        /* start well above the screen */
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: translateY(50vh);
+        /* drop to mid screen */
+        opacity: 0;
+    }
+}
+
+/* Responsive density control */
+@media (min-width: 1300px) and (max-width:2500px) {
+
+    /* Desktop - show more images */
+    .image-rain-container .image-drop:nth-child(n+51) {
+        display: none;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 1300px) {
+
+    /* Tablet - show fewer images */
+    .image-rain-container .image-drop:nth-child(n+31) {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* Mobile - show least images */
+    .image-rain-container .image-drop:nth-child(n+16) {
+        display: none;
+    }
+}

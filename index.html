@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Spotify-RC</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/utility.css">
+    <link rel="stylesheet" href="./css/animation.css">
+</head>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="close">
+                <img style="cursor: pointer;" width="30" class="invert" src="./img/close.svg" alt="close">
+            </div>
+            <div class="home bg-gray rounded m-1 p-1">
+                <div class="logo">
+                    <img width="110" class="invert" src="./img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li><img class="invert" src="./img/home.svg" alt="home">Home</li>
+                    <li><img class="invert" src="./img/search.svg" alt="search">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-gray rounded m-1 p-1">
+                <div class="heading">
+                    <h2>
+                        <img class="invert" src="./img/playlist.svg" alt="playlist">
+                        Your Library
+                    </h2>
+                </div>
+                <div class="songList">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div> <a href="https://www.spotify.com/jp/legal/"><span>Legal</span></a></div>
+                    <div> <a href="https://www.spotify.com/jp/privacy/"><span>Privacy Center</span></a></div>
+                    <div> <a href="https://www.spotify.com/jp/legal/privacy-policy/"><span>Privacy Policy</span></a>
+                    </div>
+                    <div> <a href="https://www.spotify.com/jp/legal/cookies-policy/"><span>Cookies</span></a></div>
+                    <div> <a href="https://www.spotify.com/jp/legal/privacy-policy/#s3"><span>About Ads</span></a></div>
+                    <div> <a href="https://www.spotify.com/jp/accessibility/"><span>Accessibility</span></a></div>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-gray rounded">
+            <div class="header">
+                <div class="nav">
+                    <div class="hamburgerContainer">
+                        <img style="cursor: pointer;" width="40" class="hamburger invert" src="./img/hamburger.svg"
+                            alt="hamburger">
+                        <div class="arrow-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#000000" fill="none">
+                                <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="#ffffff"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <div class="arrow-right">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                color="#ffffff" fill="none">
+                                <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18"
+                                    stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <!-- <button data-action="signup" class="signupbtn">Sign up</button>
+                    <button data-action="login" class="loginbtn">Log in</button> -->
+                </div>
+            </div>
+            <div class="spotifyPlaylist">
+                <h1>Spotify Playlists</h1>
+                <!-- Slider content wrapper -->
+                <div class="slider-content">
+                    <div class="cardContainer">
+                        <!-- Existing .card elements will be dynamically added here by script.js -->
+                    </div>
+                    <div class="profileCard" style="display: none;">
+                        <!-- Profile Card Content -->
+                            <h2>User Profile</h2>
+                            <img width="100" src="./img/favicon.ico" alt="profile">
+                        <div class="profile-info">
+                            <p><strong>Email:</strong> <span id="profileEmail">Not logged in</span></p>
+                            <p><strong>Password:</strong> <span id="profilePassword">********</span></p>
+                            <p><strong>User ID:</strong> <span id="profileUserId">N/A</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="playbar">
+                <div class="seekbar">
+                    <div class="progress"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="abovebar">
+                    <div class="songinfo"></div>
+                    <div class="songbuttons">
+                        <img width="40" id="previous" src="./img/prevsong.svg" alt="prev">
+                        <img width="40" id="play" src="./img/play.svg" alt="play">
+                        <img width="40" id="next" src="./img/nextsong.svg" alt="next">
+                    </div>
+                    <div class="timeVol">
+                        <div class="songtime"></div>
+                        <div class="volume">
+                            <img width="30px" src="./img/volume.svg" alt="volume">
+                            <div class="range">
+                                <input type="range" name="volume">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/auth-service.js"></script>
+    <script type="module" src="./js/auth-guard.js"></script>
+    <script type="module" src="./js/script.js"></script>
+</body>
+
+</html>

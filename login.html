@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <title>Login - Spotify-RC</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/utility.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-wrapper">
+            <div class="logo">
+                <img class="invert" src="./img/logo.svg" alt="Spotify" width="200">
+            </div>
+
+            <div class="login-form">
+                <h2>Log in to Spotify</h2>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <label for="email">Email or username</label>
+                        <input type="text" id="email" name="email" placeholder="Email or username" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                        <span class="toggle-password" id="togglePassword">👁️</span>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="remember-me">
+                            <input type="checkbox" id="remember">
+                            <span class="checkmark"></span>
+                            Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot your password?</a>
+                    </div>
+
+                    <button type="submit" class="login-btn">Log In</button>
+                </form>
+
+                <div class="signup-link">
+                    <span>Don't have an account?</span>
+                    <a href="./signup.html" data-action="signup">Sign up for Spotify</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/auth-service.js"></script>
+    <script type="module" src="./js/auth-guard.js"></script>
+    <script type="module" src="./js/login.js"></script>
+
+</body>
+
+</html>
