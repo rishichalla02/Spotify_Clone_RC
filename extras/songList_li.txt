@@ -1,7 +1,0 @@
-// Attach event listener to each song
-    Array.from(document.querySelectorAll(".songList li")).forEach(li => {
-        li.addEventListener("click", () => {
-            const trackName = li.querySelector(".info div").innerText.trim();
-            playMusic(trackName);
-        });
-    });

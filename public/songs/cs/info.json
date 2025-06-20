@@ -3,6 +3,8 @@
   "description": "A collection of cs music.",
   "artist": "Various Artists",
   "songs": [
+    "deepblue.mp3",
+    "happiness.mp3",
     "riverintheice.mp3",
     "sunsetreverie.mp3"
   ]

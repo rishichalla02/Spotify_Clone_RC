@@ -3,6 +3,8 @@
   "description": "A collection of chill_(mood) music.",
   "artist": "Various Artists",
   "songs": [
+    "adventure.mp3",
+    "buddy.mp3",
     "smalljoys.mp3"
   ]
 }
